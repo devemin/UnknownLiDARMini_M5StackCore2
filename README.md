@@ -23,9 +23,13 @@ PlatformIO
 ![image](https://github.com/devemin/UnknownLiDARMini_M5StackCore2/assets/52738228/1e25e9b1-362c-4d86-8162-2a21ba2d3334)
 
 このコードでは、
-(Core2) GPIO 32 pin    ->    (LiDAR) TX pin
+(Core2)                  (LiDAR)
+GPIO 32 pin      ->      TX pin
+5V               ->      5V
+GND              ->      GND
 
 としました。
+(ケーブルの色が紛らわしいので間違えないよう注意！)
 
 # パケット例
 
@@ -36,6 +40,13 @@ https://x.com/devemin/status/1809579265714975058
 # デモ
 
 https://x.com/devemin/status/1809596244073054370
+
+# メモ
+
+どうも最短距離がけっこう大きい？（0.6m くらいある？）
+データが取れない？と思ったときは、少し距離を離してみましょう。
+
+（もう少し近距離が取れるモード変更とかあると良いのですが・・・未知。）
 
 
 # 試行錯誤のスレッドリンク
