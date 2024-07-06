@@ -16,6 +16,7 @@
 # 環境
 
 M5Stack Core2
+
 PlatformIO
 
 # ピンアサイン
@@ -23,10 +24,12 @@ PlatformIO
 ![image](https://github.com/devemin/UnknownLiDARMini_M5StackCore2/assets/52738228/1e25e9b1-362c-4d86-8162-2a21ba2d3334)
 
 このコードでは、
-(Core2)                  (LiDAR)
-GPIO 32 pin      ->      TX pin
-5V               ->      5V
-GND              ->      GND
+
+| (Core2) | (LiDAR) |
+----|---- 
+| GPIO 32 pin | TX pin |
+| 5V | 5V |
+| GND | GND |
 
 としました。
 (ケーブルの色が紛らわしいので間違えないよう注意！)
@@ -50,7 +53,9 @@ https://x.com/devemin/status/1809596244073054370
 
 
 # Camsense X1 コードからの差異
+
 ・ヘッダ (4byte) 変更
+
 ・8個の深度データ　→　16個に
 
 
@@ -61,6 +66,7 @@ https://x.com/devemin/status/1807955915838218345
 # LICENSE
 
 This code is from his code.
+
 Thanks!!!  :-)
 
 https://github.com/yishii/LiDAR_Camsense_X1_M5Stack
