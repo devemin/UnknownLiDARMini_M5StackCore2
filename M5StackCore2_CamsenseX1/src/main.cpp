@@ -107,7 +107,7 @@ void remapDegrees(uint16_t minAngle, uint16_t maxAngle, uint16_t *map)
   }
   for (int32_t cnt = 0; cnt < 16; cnt++)
   {
-    map[cnt] = minAngle + (delta * cnt / 7);
+    map[cnt] = minAngle + (delta * cnt / 15);
     if (map[cnt] >= 360) {
       map[cnt] -= 360;
     }
