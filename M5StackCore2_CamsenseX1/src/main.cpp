@@ -123,8 +123,8 @@ void plotDistanceMap(uint16_t* degrees, uint16_t* distances)
   for (i = 0; i < 16; i++) {
     M5.Display.drawPixel(pointCloud[degrees[i]].x, pointCloud[degrees[i]].y, BLACK);
     if (distances[i] < 10000) {
-      x = cos((1.f * PI * degrees[i]) / 180.0f) * (distances[i] / 50.0f) + 160;
-      y = sin((1.f * PI * degrees[i]) / 180.0f) * (distances[i] / 50.0f) + 120;
+      x = cos((1.f * PI * degrees[i]) / 180.0f) * (distances[i] / 20.0f) + 160;
+      y = sin((1.f * PI * degrees[i]) / 180.0f) * (distances[i] / 20.0f) + 120;
 
       M5.Display.drawPixel(x, y, WHITE);
 
@@ -186,22 +186,22 @@ void loop() {
             uint16_t map[16];
             uint16_t distances[16];
             remapDegrees(degree_begin, degree_end, map);
-            distances[0] = packet->distance_0;
-            distances[1] = packet->distance_1;
-            distances[2] = packet->distance_2;
-            distances[3] = packet->distance_3;
-            distances[4] = packet->distance_4;
-            distances[5] = packet->distance_5;
-            distances[6] = packet->distance_6;
-            distances[7] = packet->distance_7;
-            distances[8] = packet->distance_8;
-            distances[9] = packet->distance_9;
-            distances[10] = packet->distance_10;
-            distances[11] = packet->distance_11;
-            distances[12] = packet->distance_12;
-            distances[13] = packet->distance_13;
-            distances[14] = packet->distance_14;
-            distances[15] = packet->distance_15;
+            distances[0] = packet->distance_0 & 0x3FFF;
+            distances[1] = packet->distance_1 & 0x3FFF;
+            distances[2] = packet->distance_2 & 0x3FFF;
+            distances[3] = packet->distance_3 & 0x3FFF;
+            distances[4] = packet->distance_4 & 0x3FFF;
+            distances[5] = packet->distance_5 & 0x3FFF;
+            distances[6] = packet->distance_6 & 0x3FFF;
+            distances[7] = packet->distance_7 & 0x3FFF;
+            distances[8] = packet->distance_8 & 0x3FFF;
+            distances[9] = packet->distance_9 & 0x3FFF;
+            distances[10] = packet->distance_10 & 0x3FFF;
+            distances[11] = packet->distance_11 & 0x3FFF;
+            distances[12] = packet->distance_12 & 0x3FFF;
+            distances[13] = packet->distance_13 & 0x3FFF;
+            distances[14] = packet->distance_14 & 0x3FFF;
+            distances[15] = packet->distance_15 & 0x3FFF;
             plotDistanceMap(map, distances);
           }
         }
