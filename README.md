@@ -37,6 +37,8 @@ PlatformIO
 
 # パケット例
 
+解析データ (txt, xlsx) も置いときました。
+
 https://x.com/devemin/status/1809545109446513061
 
 https://x.com/devemin/status/1809579265714975058
